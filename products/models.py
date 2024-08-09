@@ -19,7 +19,7 @@ class Category(models.Model):
 
 
 class Product(models.Model):
-    category = models.ManyToManyField('Category', blank=True)
+    category = models.ManyToManyField('Category', verbose_name='categories' , blank=True)
     title = models.CharField('title', max_length=50)
     description = models.CharField('description', max_length=250)
     avatar = models.ImageField(blank=True, upload_to='products/')
